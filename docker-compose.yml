@@ -19,13 +19,13 @@ services:
     container_name: martine-backend
     build:
       context: .
-      dockerfile: docker/node.dockerfile
+      dockerfile: docker/test.dockerfile
     ports:
       - 3000:3000
     networks:
       - network
     volumes:
-      - ./backend:/app
+     - /Users/stephanewalter/Desktop/toto:/app
     env_file:
       - docker/node.env
     restart: unless-stopped

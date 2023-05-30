@@ -1,5 +1,7 @@
 FROM node:lts
 
+RUN mkdir app
+RUN chmod 777 app
 WORKDIR /app
 
 COPY package*.json ./
@@ -19,5 +21,5 @@ COPY . .
 
 EXPOSE 3000
 
-CMD npm build run
+CMD [ "/bin/sh", "-c", "npm install && npm run build && npm start" ]
 
