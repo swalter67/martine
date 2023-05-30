@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: martine-postgress
+    image: postgres:latest
+    env_file:
+      - docker/pg.env
+    environment:
+      - pg.env
+    restart: unless-stopped
+    volumes:
+      - data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - network
+  backend:
+    container_name: martine-backend
+    build:
+      context: .
+      dockerfile: docker/node.dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - network
+    volumes:
+      - ./backend:/app
+    env_file:
+      - docker/node.env
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
+
+volumes:
+  data:
+    
+
+networks:
+  network:

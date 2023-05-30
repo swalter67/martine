@@ -1,0 +1,33 @@
+https://www.digitalocean.com/community/tutorials/how-to-use-node-js-modules-with-npm-and-package-json-fr
+
+npm init
+
+## installation des modules ##
+
+npm install "module" --save    : enregistre dans package.json
+
+## dependences de devellopement
+
+npm i "module" --save-dev
+
+## les fichiers node_modules et package-lock.json sont genere automatiquement : ne sont pas a commiter
+
+
+## lister les modules :
+
+npm ls
+
+## mise a jour des modules
+
+npm outdated
+npm up
+
+## deinstaller
+
+npm un "module"
+
+npm audit
+
+npm audit fix
+
+

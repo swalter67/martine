@@ -1,0 +1,31 @@
+{
+  "name": "martine",
+  "version": "1.0.0",
+  "description": "ft_trans",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "trans"
+  ],
+  "author": "sw",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^9.4.2",
+    "@nestjs/config": "^2.3.2",
+    "@nestjs/core": "^9.4.2",
+    "@nestjs/jwt": "^10.0.3",
+    "@nestjs/passport": "^9.0.3",
+    "@nestjs/platform-express": "^9.4.2",
+    "@nestjs/platform-socket.io": "^9.4.2",
+    "@nestjs/schedule": "^2.2.2",
+    "@nestjs/typeorm": "^9.0.1",
+    "@nestjs/websockets": "^9.4.2",
+    "nestjs-typeorm-paginate": "^4.0.3",
+    "passport": "^0.6.0",
+    "passport-42": "^1.2.6",
+    "passport-jwt": "^4.0.1",
+    "typeorm": "^0.3.16"
+  }
+}
